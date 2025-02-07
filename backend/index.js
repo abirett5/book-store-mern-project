@@ -20,7 +20,7 @@ app.use(express.json())
 // Option: 2
 app.use(
     cors({
-        origin: 'http://localhost:5173',
+        origin: 'https://book-store-mern-project-sd7v.onrender.com',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type'],
     })
