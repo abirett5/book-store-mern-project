@@ -15,16 +15,16 @@ app.use(express.json())
 
 // Middleware for handling CORS Policy
 // Option: 1
-// app.use(cors())
+app.use(cors())
 
 // Option: 2
-app.use(
-    cors({
-        origin: 'https://book-store-mern-project-sd7v.onrender.com',
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        allowedHeaders: ['Content-Type'],
-    })
-)
+// app.use(
+//     cors({
+//         origin: 'https://book-store-mern-project-sd7v.onrender.com',
+//         methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//         allowedHeaders: ['Content-Type'],
+//     })
+// )
 
 app.get("/", (req, res) => {
     console.log(req)
