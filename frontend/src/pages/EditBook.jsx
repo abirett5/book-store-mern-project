@@ -32,7 +32,7 @@ const EditBook = () => {
           })
   }, [])
 
-  const handleSaveBook = () => {
+  const handleEditBook = () => {
     const data = {
       title,
       author,
@@ -41,7 +41,7 @@ const EditBook = () => {
 
     setLoading(true)
 
-    axios.post('https://book-store-mern-project-backend-ddvi.onrender.com/books', data)
+    axios.put(`https://book-store-mern-project-backend-ddvi.onrender.com/books/${id}`, data)
           .then(() => {
             setLoading(false)
             navigate('/')
@@ -85,7 +85,7 @@ const EditBook = () => {
           />
         </div>
 
-        <button className="p-2 bg-sky-300 m-8 cursor-pointer" onClick={ handleSaveBook }>Save</button>
+        <button className="p-2 bg-sky-300 m-8 cursor-pointer" onClick={ handleEditBook }>Save</button>
       </div>
     </div>
   )
